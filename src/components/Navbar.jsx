@@ -38,20 +38,19 @@ export default function Navbar() {
             </Link>
             
             {/* for  toggle component */}
-            <section onClick={toggleTheme}>
-                Toggle theme
+            <section 
+            onClick={toggleTheme} 
+            className='flex items-center gap-3 cursor-pointer p-1 m-1 md:px-2 py-2 transition-all'>
 
-                <div>
-
+                <div className='text-2xl md:text-base'>
                     {resolvedTheme=='light' ?  <BsMoonFill /> :   <BsFillSunFill /> }
-
                 </div>
-
           
 
-                <div>
-
-                </div>
+                <span className='text-2xl md:text-2xl font-medium hidden md:block'>
+                  Mode - 
+                {resolvedTheme=='light' ?  'Dark' : 'Light' }
+                </span>
 
             </section>
 
