@@ -9,7 +9,8 @@ import CountryCard from "@/components/CountryCard";
 export default function Home() {
 
   const {isLoading,error,data} = useQuery("countries",
-     ()=> fetchCountries() );
+     ()=> fetchCountries() 
+    );
 
      console.log("data returned", data)
 

@@ -11,8 +11,13 @@ export default function LayoutContainer( {children} ) {
   return (
     <QueryClientProvider client={queryClient}>
 
-    <ThemeProvider attribute="class">
-        {children}
+        <ThemeProvider 
+        attribute="class"
+        defaultTheme="system" 
+        enableSystem={true} 
+        disableTransitionOnChange={true}   
+        >
+          {children}
         </ThemeProvider>
 
         </QueryClientProvider>
