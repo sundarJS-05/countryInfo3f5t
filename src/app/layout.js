@@ -51,6 +51,7 @@ export default function RootLayout({ children }) {
         <br></br>
 
         <div className="max-w-screen-2xl mx-auto p-4 md:px-12">
+          
         {/* children prop=passed componets */}
         {children}
 

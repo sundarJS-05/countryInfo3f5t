@@ -6,6 +6,7 @@ import { fetchCountries } from "./action";
 import {useQuery} from 'react-query'
 import CountryCard from "@/components/CountryCard";
 
+
 export default function Home() {
 
   const {isLoading,error,data} = useQuery("countries",
@@ -20,12 +21,10 @@ export default function Home() {
   return (
     <section className="flex flex-wrap md:justify-between  justify-center">
 
-      {data.map(  (data, index)=>{
+      {data?.map(  (d, i)=>{
 
-        <CountryCard 
-        key={index}  
-        currencies={data.currencies}
-        flags={data.flags}  
+        <CountryCard  key={i}  {...d}
+
         />
        
       })   }
@@ -34,3 +33,4 @@ export default function Home() {
 
   );
 }
+

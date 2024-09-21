@@ -13,12 +13,12 @@ export default function Navbar() {
   // use of {] brackets for destructuring
   const {setTheme, resolvedTheme} = useTheme()
 
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-    // ensure COMP mounted before using theme-values
-    useEffect(() => {
-      setMounted(true);
-    }, []);
+  //   // ensure COMP mounted before using theme-values
+  //   useEffect(() => {
+  //     setMounted(true);
+  //   }, []);
 
   function toggleTheme(){
     if (resolvedTheme=='dark'){
@@ -31,8 +31,8 @@ export default function Navbar() {
 
   }
 
-  // Prevent rendering until the theme is resolved
-  if (!mounted) return null; 
+  // // Prevent rendering until the theme is resolved
+  // if (!mounted) return null; 
 
 
   return (

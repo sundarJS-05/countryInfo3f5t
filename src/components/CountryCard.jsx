@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import LabelSpan from './ui/LabelSpan';
 
 export default function CountryCard(props) {
   return (
@@ -31,4 +32,20 @@ function CountryImage({ src }) {
       <Image height={168} width={288} src={src} alt="country-img" />
     </div>
   );
+}
+
+
+function CountryInfo(){
+
+
+  return(
+    <div className='flex text-xl'>
+
+      <div>
+        <LabelSpan/>
+      </div>
+    </div>
+
+  )
+
 }
